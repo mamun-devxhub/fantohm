@@ -1,9 +1,10 @@
 <template>
-  <div class="flex">
-    <header class=" absolute lg:static top-0">
+  <div class="flex ">
+    <header class="absolute lg:static top-0 w-[19rem]">
       <the-navigation></the-navigation>
     </header>
-    <main> 
+    <main class="w-full">
+      <the-header></the-header>
       <router-view></router-view>
     </main>
   </div>
