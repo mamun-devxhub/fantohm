@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <div class="grid grid-cols-4 main-info mb-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 main-info mb-8">
       <div>
         <p class="text-h6">FHM Price</p>
         <p class="text-h5">$1.07</p>
@@ -26,7 +26,7 @@
         <p class="text-h5">$28,432,324</p>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div class="main-info">
         <p class="text-h6">Total Value Deposited</p>
         <p class="text-h5">$2,378,260</p>
