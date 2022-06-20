@@ -6,10 +6,10 @@ import "./index.css";
 import App from './App.vue';
 import Dashboard from './components/CompDashBoard.vue';
 import CompDex from './components/CompDex.vue';
-import CompStake from './components/CompStake.vue';
-import CompStaking from "./components/CompStaking.vue";
-import CompStake90Days from "./components/CompStake90Days.vue";
-import CompStake180Days from "./components/CompStake180Days.vue";
+import CompStake from './components/staking/CompStake.vue';
+import CompStaking from "./components/staking/CompStaking.vue";
+import CompStake90Days from "./components/staking/CompStake90Days.vue";
+import CompStake180Days from "./components/staking/CompStake180Days.vue";
 import CompWrap from './components/CompWrap.vue';
 import CompInvestments from './components/CompInvestments.vue';
 import CompUsdbBond from './components/CompUsdbBond.vue';
@@ -19,6 +19,7 @@ import CompBridge from './components/CompBridge.vue';
 import CompWebsite from './components/CompWebsite.vue';
 import CompGovernance from './components/CompGovernance.vue';
 import CompDocs from './components/CompDocs.vue';
+
 
 const router = createRouter({
   history: createWebHistory(),

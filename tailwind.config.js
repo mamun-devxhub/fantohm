@@ -7,7 +7,8 @@ module.exports = {
       colors: {
         primary: "#FCFCFC",
         secondary: "#93979D",
-        "text-hover": "#F7C775",
+        "text-hover-color": "#F7C775",
+        gray: "rgba(255, 255, 255, 0.5)",
       },
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
