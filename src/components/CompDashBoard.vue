@@ -488,13 +488,7 @@ export default {
 </script>
 
 <style scoped>
-.main-info {
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
-  border: 2px solid hsla(0, 0%, 100%, 0.1);
-  background: none;
-  box-shadow: none;
-}
+
 .border-bottom {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   padding-bottom: 5px;

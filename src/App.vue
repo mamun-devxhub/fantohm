@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import TheNavigation from "./components/TheNavigation.vue";
-import TheHeader from "./components/TheHeader.vue";
+import TheNavigation from "./components/common/TheNavigation.vue";
+import TheHeader from "./components/common/TheHeader.vue";
 
 export default {
   components: {
