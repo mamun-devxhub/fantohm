@@ -7,8 +7,8 @@
         <li class="relative group">
           <a href="#" class="button-style box-shadow px-3"
             ><img
-              class="w-5 h-5 mr-1"
-              src="../assets/images/steelseries.svg"
+              class="w-5 h-5 mr-2"
+              src="../assets/icon/header/1.svg"
               alt=""
             />
             Fantom</a
@@ -22,10 +22,10 @@
             >
               <a
                 href="#"
-                class="flex text-white hover:bg-[#555B64] pr-16 pl-3 py-2 rounded-md transition-all duration-100 ease-linear"
+                class="flex items-center text-white hover:bg-[#555B64] pr-16 pl-3 py-2 rounded-md transition-all duration-100 ease-linear"
                 ><img
-                  class="w-5 h-5 mr-1"
-                  src="../assets/images/steelseries.svg"
+                  class="w-5 h-5 mr-2"
+                  src="../assets/icon/header/3.svg"
                   alt=""
                 />Moonriver</a
               >
@@ -36,20 +36,39 @@
         <li>
           <a href="#" class="button-style box-shadow px-3"
             ><img
-              class="w-5 h-5 mr-1"
-              src="../assets/images/steelseries.svg"
+              class="w-5 h-5 mr-2"
+              src="../assets/icon/header/2.svg"
               alt=""
             />FHM</a
           >
         </li>
 
         <li>
-          <a href="#" class="px-5 button-style box-shadow">Connect Wallet</a>
+          <a
+            href="#"
+            @click="showModal = true"
+            class="px-5 button-style box-shadow"
+            >Connect Wallet</a
+          >
         </li>
+        <TheModal v-show="showModal" @close-modal="showModal = false" />
       </ul>
     </div>
   </section>
 </template>
+
+<script>
+import TheModal from "./modal/TheModal.vue";
+
+export default {
+  components: { TheModal },
+  data() {
+    return {
+      showModal: false,
+    };
+  },
+};
+</script>
 
 <style scoped>
 .button-style {
