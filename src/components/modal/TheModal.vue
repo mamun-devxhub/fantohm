@@ -4,7 +4,7 @@
       class="fixed top-0 bottom-0 right-0 left-0 z-50 flex justify-center background"
       @click="$emit('close-modal')"
     >
-      <div class="grid content-start m-10 sm:m-10">
+      <div class="grid content-start m-10 sm:m-0">
         <div
           class="cursor-pointer flex justify-between items-center py-5"
           @click="$emit('close-modal')"
