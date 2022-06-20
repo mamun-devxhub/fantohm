@@ -20,6 +20,7 @@ import CompWebsite from './components/CompWebsite.vue';
 import CompGovernance from './components/CompGovernance.vue';
 import CompDocs from './components/CompDocs.vue';
 
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [

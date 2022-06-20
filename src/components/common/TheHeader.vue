@@ -46,29 +46,15 @@
         <li>
           <a
             href="#"
-            @click="showModal = true"
+            @click="$emit('show-the-modal')"
             class="px-5 button-style box-shadow"
             >Connect Wallet</a
           >
         </li>
-        <TheModal v-show="showModal" @close-modal="showModal = false" />
       </ul>
     </div>
   </section>
 </template>
-
-<script>
-import TheModal from "../modal/TheModal.vue";
-
-export default {
-  components: { TheModal },
-  data() {
-    return {
-      showModal: false,
-    };
-  },
-};
-</script>
 
 <style scoped>
 .button-style {

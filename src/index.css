@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  html,body {
+  html,
+  body {
     @apply text-white;
     font-family: Montserrat, sans-serif;
     background: linear-gradient(180deg, #313945, #161d26) no-repeat;
@@ -45,7 +46,7 @@
     background: none;
     box-shadow: none;
   }
-  .wallet-button{
-    @apply text-xl text-[#3C434E] bg-[#F6C675] hover:bg-[#CCA551] px-9 py-2 rounded-md transition-all duration-300
+  .wallet-button {
+    @apply text-xl text-[#3C434E] bg-[#F6C675] hover:bg-[#CCA551] px-9 py-2 rounded-md transition-all duration-300;
   }
 }

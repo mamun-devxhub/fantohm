@@ -1,10 +1,10 @@
 <template>
   <transition name="modal-fade">
     <div
-      class="fixed top-0 bottom-0 right-0 left-0 z-[9999] flex justify-center background"
+      class="fixed top-0 bottom-0 right-0 left-0 z-50 flex justify-center background"
       @click="$emit('close-modal')"
     >
-      <div class="grid content-start m-10">
+      <div class="grid content-start m-10 sm:m-10">
         <div
           class="cursor-pointer flex justify-between items-center py-5"
           @click="$emit('close-modal')"
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.modal-fade-enter,
+.modal-fade-enter-from,
 .modal-fade-leave-to {
   opacity: 0;
 }
