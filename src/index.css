@@ -6,7 +6,7 @@
   body {
     @apply text-white;
     font-family: Montserrat, sans-serif;
-    background: linear-gradient(180deg, #313945, #161d26)  no-repeat;
+    background: linear-gradient(180deg, #313945, #161d26) no-repeat;
   }
   .box-shadow {
     box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
@@ -16,8 +16,7 @@
 
 @layer components {
   .dashboard {
-    padding: 0 3rem 2rem;
-    width: 100%;
+    @apply px-4 pb-6 md:px-12 md:pb-8 w-full;
   }
 
   .text-h6 {
