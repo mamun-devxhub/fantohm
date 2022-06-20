@@ -34,9 +34,9 @@ export default {
 
 <style scoped>
 .body-background{
-  height: 100%;
-  width: 100%;
+  @apply h-full w-full;
   background: linear-gradient(180deg, #313945, #161d26) no-repeat;
+  position: fixed;
 }
 .scale-enter-active,
 .scale-leave-active {
