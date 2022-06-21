@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div class="dashboard my-3">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 main-info mb-8">
       <div>
         <p class="text-h6">FHM Price</p>
@@ -560,13 +560,7 @@ export default {
 </script>
 
 <style scoped>
-.main-info {
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
-  border: 2px solid hsla(0, 0%, 100%, 0.1);
-  background: none;
-  box-shadow: none;
-}
+
 .border-bottom {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   padding-bottom: 5px;
@@ -574,12 +568,10 @@ export default {
 .last-child div:last-child {
   border-bottom: 0;
 }
-
 .tooltip {
   position: relative;
   display: inline-block;
 }
-
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 260px;
@@ -604,7 +596,6 @@ export default {
   opacity: 0;
   transition: opacity 1s;
 }
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;

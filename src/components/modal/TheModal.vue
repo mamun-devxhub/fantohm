@@ -1,10 +1,10 @@
 <template>
   <transition name="modal-fade">
     <div
-      class="fixed top-0 bottom-0 right-0 left-0 flex justify-center bg-[#000000da]"
+      class="fixed top-0 bottom-0 right-0 left-0 z-50 flex justify-center background"
       @click="$emit('close-modal')"
     >
-      <div class="grid content-start">
+      <div class="grid content-start m-10 sm:m-0">
         <div
           class="cursor-pointer flex justify-between items-center py-5"
           @click="$emit('close-modal')"
@@ -25,9 +25,9 @@
         </div>
 
         <!-- Modal body -->
-        <div class="text-center bg-white rounded-2xl" @click.stop>
+        <div class="text-center bg-white rounded-2xl " @click.stop>
           <div
-            class="md:w-[330px] w-28 md:h-8 h-8 mt-4 relative top-5 -translate-x-1/2 -translate-y-1/2 left-1/2 rounded-lg yes_no"
+            class="w-[330px] h-8  mt-4 relative top-5 -translate-x-1/2 -translate-y-1/2 left-1/2 rounded-lg yes_no hidden sm:block"
           >
             <input
               type="checkbox"
@@ -40,8 +40,6 @@
           </div>
 
           <div>
-            <!-- <button  @click="SetSelectedComponent('QRcode')">QRcode</button>
-            <button @click="SetSelectedComponent('WalletApps')">WalletApps</button> -->
             <component :is="SelectedComponent" />
           </div>
         </div>
@@ -58,15 +56,13 @@ export default {
   emits: ["close-modal"],
   data() {
     return {
-      checked: false,
-      SelectedComponent: shallowRef(WalletApps),
+      checked: true,
+      SelectedComponent: shallowRef(QRcode),
     };
   },
 
   methods: {
-    // toggle() {
-    //   this.checked = !this.checked;
-    // },
+    
     SetSelectedComponent() {
       this.checked = !this.checked;
       if (this.SelectedComponent === QRcode) {
@@ -85,7 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.modal-fade-enter,
+.modal-fade-enter-from,
 .modal-fade-leave-to {
   opacity: 0;
 }
@@ -93,29 +89,27 @@ export default {
 .modal-fade-leave-active {
   transition: opacity 0.5s ease;
 }
-
+.background{
+  background: rgba(37, 41, 46, 0.95)
+}
 .checkbox {
   @apply absolute top-4 w-full cursor-pointer z-50 opacity-0 -translate-x-1/2 -translate-y-1/2 left-1/2;
 }
-
 .yes_no {
   background-color: #d2d3d7;
 }
-
 .yes {
   height: 1.5rem;
   width: 300px;
   top: 1;
   @apply absolute -left-20 rounded-lg text-white font-bold text-center text-sm leading-8 z-10 transition-all duration-300 ease-in-out;
 }
-
 .yes1 {
   height: 1.5rem;
   width: 300px;
   top: 1;
   @apply absolute -left-20 rounded-lg text-white font-bold text-center text-sm leading-8 z-10 transition-all duration-300 ease-in-out;
 }
-
 .no {
   height: 1.5rem;
   width: 300px;
@@ -123,7 +117,6 @@ export default {
   top: 1;
   @apply absolute  rounded-lg text-white font-bold text-center text-sm leading-8 z-10 transition-all duration-300 ease-in-out;
 }
-
 .no1 {
   height: 1.5rem;
   width: 300px;
@@ -131,14 +124,12 @@ export default {
   top: 1;
   @apply absolute rounded-lg text-white font-bold text-center text-sm leading-8 z-10 transition-all duration-300 ease-in-out;
 }
-
 .text {
   height: 1.5rem;
   width: 150px;
   left: 5px;
   @apply absolute top-1 rounded-[6px] bg-white text-white font-bold text-center text-sm leading-8 transition-all duration-300 ease-in-out;
 }
-
 .text1 {
   height: 1.5rem;
   width: 150px;
