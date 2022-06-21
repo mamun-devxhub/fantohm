@@ -4,10 +4,10 @@
       <the-navigation></the-navigation>
     </header>
     <main class="w-full overflow-y-auto">
-      <the-header @show-the-modal='showModal = true'></the-header>
+      <the-header @show-the-modal="showModal = true"></the-header>
       <TheModal v-show="showModal" @close-modal="showModal = false" />
       <transition name="scale" mode="out-in">
-        <router-view @show-the-modal='showModal = true'></router-view>
+        <router-view @show-the-modal="showModal = true"></router-view>
       </transition>
     </main>
   </div>
@@ -31,9 +31,22 @@ export default {
   },
 };
 </script>
+<style>
+.apexcharts-tooltip {
+  background-color: #161d26 !important;
+  color: white;
+  border-color: #161d26 !important;
+  width: 240px;
+  border-radius: 20px !important;
+  padding: 8px 20px;
+}
 
-<style scoped>
-.body-background{
+.apexcharts-tooltip-title {
+  background-color: #161d26 !important;
+  color: white;
+  border-color: #161d26 !important;
+}
+.body-background {
   @apply h-full w-full;
   background: linear-gradient(180deg, #313945, #161d26) no-repeat;
   position: fixed;

@@ -28,13 +28,26 @@
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div class="main-info">
-        <p class="text-h6">Total Value Deposited</p>
+        <div class="text-h6 flex justify-between items-center">
+          <div class="flex  items-center">
+              <span>Total Value Deposited</span>
+              <div class="tooltip">
+                <img class="w-4" src="../assets/icon/dashboard/i.svg" alt="" />
+                <span class="tooltiptext"
+                  >Total Value Deposited, is the dollar amount of all FHM Staked
+                  in the protocol. This metric is often used as growth or health
+                  indicator in DeFi projects.</span
+                >
+              </div>
+            </div>
+            <img src="../assets/icon/dashboard/preview.svg" alt="" />
+        </div>
         <p class="text-h5">$2,378,260</p>
 
-        <div id="chart" class="">
+        <div id="chart" class="h-full">
           <apexchart
             type="area"
-            height="600"
+            height="700"
             :options="chartOptions"
             :series="series"
           ></apexchart>
@@ -92,12 +105,54 @@
         </div>
       </div>
       <div class="main-info">
-        <p class="text-h6">Protocol Owned Liquidity FHM-DAI</p>
+        <div class="text-h6 flex justify-between items-center">
+          <div class="flex items-center">
+            <span>Protocol Owned Liquidity FHM-DAI</span>
+            <div class="tooltip">
+              <img class="w-4" src="../assets/icon/dashboard/i.svg" alt="" />
+              <span class="tooltiptext"
+                >Protocol Owned Liquidity, is the amount of LP the treasury owns
+                and controls. The more POL the better for the protocol and its
+                users..</span
+              >
+            </div>
+          </div>
+          <img src="../assets/icon/dashboard/preview.svg" alt="" />
+        </div>
         <p class="text-h5">99.99%</p>
+
+        <div id="chart" class="h-full">
+          <apexchart
+            type="area"
+            height="140"
+            :options="chartOptions"
+            :series="series"
+          ></apexchart>
+        </div>
       </div>
       <div class="main-info">
-        <p class="text-h6">FHM Staked</p>
+        <div class="text-h6 flex justify-between items-center">
+          <div class="flex items-center">
+            <span>FHM Staked</span>
+            <div class="tooltip">
+              <img class="w-4" src="../assets/icon/dashboard/i.svg" alt="" />
+              <span class="tooltiptext"
+                >FHM Staked, is the ratio of sFHM to FHM (staked vs
+                unstaked)</span
+              >
+            </div>
+          </div>
+          <img src="../assets/icon/dashboard/preview.svg" alt="" />
+        </div>
         <p class="text-h5">87.85%</p>
+        <div id="chart" class="h-full">
+          <apexchart
+            type="area"
+            height="140"
+            :options="chartOptions"
+            :series="series"
+          ></apexchart>
+        </div>
       </div>
     </div>
   </div>
@@ -396,13 +451,24 @@ export default {
         chart: {
           id: "area-datetime",
           type: "area",
-          height: 350,
+          height: "100%",
           zoom: {
-            autoScaleYaxis: false,
+            enabled: false,
           },
           toolbar: {
             show: false,
           },
+          sparkline: {
+            enabled: true,
+          },
+        },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: ["#FFD489"],
+          width: 2,
+          dashArray: 0,
         },
         grid: {
           show: false,
@@ -418,27 +484,33 @@ export default {
         xaxis: {
           type: "datetime",
           min: new Date("01 Mar 2012").getTime(),
+          // max: new Date().getTime(),
           tickAmount: 0,
           labels: {
             show: false,
           },
         },
-        yaxis: {
-          labels: {
-            show: false,
-          },
-        },
+
         tooltip: {
+          enabled: true,
+          fillSeriesColor: false,
+          // theme: "dark",
+          style: {
+            fontSize: "16px",
+            fontFamily: undefined,
+            background: "#000000",
+          },
           x: {
             format: "dd MMM yyyy",
           },
         },
         fill: {
           type: "gradient",
+          colors: ["#FFD489"],
           gradient: {
             shadeIntensity: 1,
             opacityFrom: 0.7,
-            opacityTo: 0.9,
+            opacityTo: 0,
             stops: [0, 100],
           },
         },
@@ -495,5 +567,37 @@ export default {
 }
 .last-child div:last-child {
   border-bottom: 0;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 260px;
+  background-color: #313945;
+  color: #fff;
+  text-align: justify;
+  border-radius: 6px;
+  padding: 24px;
+  font-size: 0.75rem;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 16px;
+  border: 2px solid hsla(0, 0%, 100%, 0.1);
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 </style>
