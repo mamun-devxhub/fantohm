@@ -21,3 +21,19 @@ export default {
   },
 };
 </script>
+<style>
+.apexcharts-tooltip {
+  background-color: #161d26 !important;
+  color: white;
+  border-color: #161d26 !important;
+  width: 240px;
+  border-radius: 20px !important;
+  padding: 8px 20px;
+}
+
+.apexcharts-tooltip-title {
+  background-color: #161d26 !important;
+  color: white;
+  border-color: #161d26 !important;
+}
+</style>
