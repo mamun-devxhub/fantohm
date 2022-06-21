@@ -2,7 +2,7 @@
 
 <template>
   <nav
-    class="box-shadow scroll fixed top-0 left-0 overflow-y-auto background h-full pt-14 pb-24 px-10 hidden lg:block z-30"
+    class="box-shadow no-scrollbar fixed top-0 left-0 overflow-y-auto background h-full pt-14 pb-24 px-10 hidden lg:block z-30"
   >
     <div class="py-10 w-28">
       <router-link to="/"
@@ -77,7 +77,7 @@
 
       <li class="nav-link">
         <img class="w-6 mr-3" src="../../assets/icon/navbar/8.svg" alt="" />
-        <router-link class="anchor" to="/bond">Bond</router-link>
+        <router-link class="anchor" to="/bond">Bond(4,4)</router-link>
       </li>
 
       <li class="nav-link">
@@ -147,28 +147,28 @@
 
   <!-- Nav Button -->
   <button
-    class="z-40 relative top-5 left-3 w-9 h-8 text-gray-500 focus:outline-none lg:hidden"
+    class="z-40 relative top-[13px] sm:top-5 left-3 w-9  text-gray-500 focus:outline-none lg:hidden"
     @click="toogleMenuHandler"
   >
     <span class="sr-only">Open main menu</span>
     <div
-      class="absolute block p-5 bg-[#343B47] rounded-md transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+      class="absolute block p-[18px] bg-[#343B47] rounded-md transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
     >
       <span
         aria-hidden="true"
-        class="block absolute h-0.5 w-5 bg-primary transform transition duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 left-1/2"
+        class="block absolute h-[2.5px] mt-[1px] w-5 bg-primary transform transition duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 left-1/2"
         :class="{
           ' -translate-y-1.5': !isShown,
         }"
       ></span>
       <span
         aria-hidden="true"
-        class="block absolute h-[2px] w-4 mt-[1px] bg-primary transform transition duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 left-1/2"
+        class="block absolute h-[2.5px] w-4 mt-[1.4px] bg-primary transform transition duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 left-1/2"
         :class="{ 'opacity-0': isShown }"
       ></span>
       <span
         aria-hidden="true"
-        class="block absolute h-[2.5px] w-3 bg-primary transform transition duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 left-1/2"
+        class="block absolute h-[2.5px] w-3   bg-primary transform transition duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 left-1/2"
         :class="{
           ' translate-y-1.5': !isShown,
         }"
@@ -178,7 +178,7 @@
 
   <!-- Nav links -->
 
-  <nav class="scroll fixed top-0 left-0 overflow-y-auto h-full">
+  <nav class=" fixed top-0 left-0 no-scrollbar overflow-y-auto h-full">
     <transition name="slide">
       <ul
         v-if="toggleMenu"
@@ -284,7 +284,7 @@
         <li class="nav-link">
           <img class="w-6 mr-3" src="../../assets/icon/navbar/8.svg" alt="" />
           <router-link @click="toogleMenuHandler" class="anchor" to="/bond"
-            >Bond</router-link
+            >Bond(4,4)</router-link
           >
         </li>
 
@@ -384,12 +384,6 @@ export default {
 .background {
   background-color: rgba(60, 67, 78, 1);
   background-image: linear-gradient(180deg, #313945, #282f3b 72%, #161d26);
-}
-.scroll {
-  overflow-y: auto;
-  overflow-x: auto; 
-  scrollbar-width: thin;
-  scrollbar-width: thin;
 }
 .social-icon-background {
   background: linear-gradient(

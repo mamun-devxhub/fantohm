@@ -3,7 +3,7 @@
     <header class="absolute lg:static top-0 w-[19rem]">
       <the-navigation></the-navigation>
     </header>
-    <main class="w-full">
+    <main class="w-full overflow-y-auto">
       <the-header @show-the-modal='showModal = true'></the-header>
       <TheModal v-show="showModal" @close-modal="showModal = false" />
       <transition name="scale" mode="out-in">

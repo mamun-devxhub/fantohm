@@ -50,3 +50,13 @@
     @apply text-xl text-[#3C434E] bg-[#F6C675] hover:bg-[#CCA551] px-9 py-2 rounded-md transition-all duration-300;
   }
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
