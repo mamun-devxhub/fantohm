@@ -1,7 +1,7 @@
 <template>
   <section class="px-3 sm:px-5">
-    <div class="grid grid-cols-7 justify-center my-3">
-      <div></div>
+    <div class="grid grid-cols-7  sm:my-3">
+      <div class="xl:col-span-1 "></div>
       <div class="col-span-7 xl:col-span-5 main-info lg:ml-7 xl:mx-7">
         <div>
           <h4 class="text-[18px] sm:text-h4 py-0">
@@ -47,7 +47,7 @@
         </div>
         <p class="text-center mt-5">Connect your wallet to stake fwsFHM</p>
       </div>
-      <div></div>
+      <div class="xl:col-span-1 "></div>
     </div>
   </section>
 </template>

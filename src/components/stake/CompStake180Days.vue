@@ -1,31 +1,40 @@
 <template>
   <section class="px-3 sm:px-5">
-    <div class="grid grid-cols-7 justify-center my-3">
-      <div></div>
+    <div class="grid grid-cols-7  sm:my-3">
+      <div class="xl:col-span-1 "></div>
       <div class="col-span-7 xl:col-span-5 main-info lg:ml-7 xl:mx-7">
         <div>
-          <h4 class="text-[18px] sm:text-h4 py-0">Staking (👻, 👻)</h4>
+          <h4 class="text-[18px] sm:text-h4 py-0">
+            Accelerated Staking - 180 Days (⚡️,⚡️)
+          </h4>
           <p class="text-xs">
-            ~8 hrs, 1 min to next
+            <span class="font-extrabold">~3 hrs, 44 mins</span> to next
             <a
               href="#"
-              class="border-b-[1px] hover:border-b-0 hover:text-text-hover-color"
-              >rebase</a
+              class="border-b-[1px] hover:border-b-0 hover:text-text-hover"
+              >pool rewards</a
             >
           </p>
         </div>
 
+
         <div class="flex flex-col  sm:flex-row sm:justify-evenly pt-10 sm:py-10">
           <div class="text-start sm:text-center sm:pl-14 sm:pr-32">
             <h4 class="text-h4  text-gray">APY</h4>
-            <h4 class="text-h4 ">1.1%</h4>
+            <h4 class="text-h4 ">184%</h4>
           </div>
           <div class="text-start sm:text-center pt-4 sm:pt-0">
             <h4 class="text-h4  text-gray">
               Total Value Deposited
             </h4>
-            <h4 class="text-h4 ">$2,181,508</h4>
+            <h4 class="text-h4 ">21374.1630 fwsFHM</h4>
           </div>
+        </div>
+
+        <div class="main-info bg-[#212429] my-2 sm:my-5">
+          <p class="text-[0.875rem]">
+            Each time you stake your 180 day warm-up period resets. When you wait until the end of the warm-up period, you can withdraw without fees.
+          </p>
         </div>
 
         <div class="text-center mt-5 sm:mt-0">
@@ -34,13 +43,13 @@
           >
          
         </div>
-
-        <p class="text-center mt-5">Connect your wallet to stake FHM</p>
+        <p class="text-center mt-5">Connect your wallet to stake fwsFHM</p>
       </div>
-      <div></div>
+      <div class="xl:col-span-1 "></div>
     </div>
   </section>
 </template>
+
 
 
 

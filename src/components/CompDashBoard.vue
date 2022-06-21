@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div class="dashboard my-3">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 main-info mb-8">
       <div>
         <p class="text-h6">FHM Price</p>
