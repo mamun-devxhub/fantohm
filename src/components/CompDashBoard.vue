@@ -29,28 +29,35 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div class="main-info">
         <div class="text-h6 flex justify-between items-center">
-          <div class="flex  items-center">
-              <span>Total Value Deposited</span>
-              <div class="tooltip">
-                <img class="w-4" src="../assets/icon/dashboard/i.svg" alt="" />
-                <span class="tooltiptext"
-                  >Total Value Deposited, is the dollar amount of all FHM Staked
-                  in the protocol. This metric is often used as growth or health
-                  indicator in DeFi projects.</span
-                >
-              </div>
+          <div class="flex items-center">
+            <span>Total Value Deposited</span>
+            <div class="tooltip">
+              <img class="w-4" src="../assets/icon/dashboard/i.svg" alt="" />
+              <span class="tooltiptext"
+                >Total Value Deposited, is the dollar amount of all FHM Staked
+                in the protocol. This metric is often used as growth or health
+                indicator in DeFi projects.</span
+              >
             </div>
+          </div>
+          <button @click="showModal = true" class="">
             <img src="../assets/icon/dashboard/preview.svg" alt="" />
+          </button>
+          <ChartModal
+            v-show="showModal"
+            @close-modal="showModal = false"
+            height="300"
+            :series="series1"
+            title="Total Value Deposited, is the dollar amount of all FHM Staked
+                in the protocol. This metric is often used as growth or health
+                indicator in DeFi projects."
+            value="$2,378,260"
+          />
         </div>
         <p class="text-h5">$2,378,260</p>
 
         <div id="chart" class="h-full">
-          <apexchart
-            type="area"
-            height="700"
-            :options="chartOptions"
-            :series="series"
-          ></apexchart>
+          <ApexChart height="700" :series="series1" />
         </div>
       </div>
       <div class="main-info">
@@ -117,17 +124,24 @@
               >
             </div>
           </div>
-          <img src="../assets/icon/dashboard/preview.svg" alt="" />
+          <button @click="showModal = true" class="">
+            <img src="../assets/icon/dashboard/preview.svg" alt="" />
+          </button>
+          <ChartModal
+            v-show="showModal"
+            @close-modal="showModal = false"
+            height="300"
+            :series="series2"
+            title="Protocol Owned Liquidity, is the amount of LP the treasury owns
+                and controls. The more POL the better for the protocol and its
+                users.."
+            value="99.99%"
+          />
         </div>
         <p class="text-h5">99.99%</p>
 
         <div id="chart" class="h-full">
-          <apexchart
-            type="area"
-            height="140"
-            :options="chartOptions"
-            :series="series"
-          ></apexchart>
+          <ApexChart height="140" :series="series2" />
         </div>
       </div>
       <div class="main-info">
@@ -142,32 +156,42 @@
               >
             </div>
           </div>
-          <img src="../assets/icon/dashboard/preview.svg" alt="" />
+          <button @click="showModal = true" class="">
+            <img src="../assets/icon/dashboard/preview.svg" alt="" />
+          </button>
+          <ChartModal
+            v-show="showModal"
+            @close-modal="showModal = false"
+            height="300"
+            :series="series3"
+            title="FHM Staked, is the ratio of sFHM to FHM (staked vs
+                unstaked)"
+            value="87.85%"
+          />
         </div>
         <p class="text-h5">87.85%</p>
         <div id="chart" class="h-full">
-          <apexchart
-            type="area"
-            height="140"
-            :options="chartOptions"
-            :series="series"
-          ></apexchart>
+          <ApexChart height="140" :series="series3" />
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import VueApexCharts from "vue3-apexcharts";
+import ApexChart from "./modal/ApexChart.vue";
+import ChartModal from "../components/modal/ChartModal.vue";
 
 export default {
   components: {
-    apexchart: VueApexCharts,
+    ApexChart,
+    ChartModal,
   },
   data() {
     return {
-      series: [
+      showModal: false,
+      series1: [
         {
+          name: "Total deposited",
           data: [
             [1327359600000, 30.95],
             [1327446000000, 31.34],
@@ -345,47 +369,6 @@ export default {
             [1348783200000, 32.44],
             [1349042400000, 32.62],
             [1349128800000, 32.57],
-            [1349215200000, 32.6],
-            [1349301600000, 32.68],
-            [1349388000000, 32.47],
-            [1349647200000, 32.23],
-            [1349733600000, 31.68],
-            [1349820000000, 31.51],
-            [1349906400000, 31.78],
-            [1349992800000, 31.94],
-            [1350252000000, 32.33],
-            [1350338400000, 33.24],
-            [1350424800000, 33.44],
-            [1350511200000, 33.48],
-            [1350597600000, 33.24],
-            [1350856800000, 33.49],
-            [1350943200000, 33.31],
-            [1351029600000, 33.36],
-            [1351116000000, 33.4],
-            [1351202400000, 34.01],
-            [1351638000000, 34.02],
-            [1351724400000, 34.36],
-            [1351810800000, 34.39],
-            [1352070000000, 34.24],
-            [1352156400000, 34.39],
-            [1352242800000, 33.47],
-            [1352329200000, 32.98],
-            [1352415600000, 32.9],
-            [1352674800000, 32.7],
-            [1352761200000, 32.54],
-            [1352847600000, 32.23],
-            [1352934000000, 32.64],
-            [1353020400000, 32.65],
-            [1353279600000, 32.92],
-            [1353366000000, 32.64],
-            [1353452400000, 32.84],
-            [1353625200000, 33.4],
-            [1353884400000, 33.3],
-            [1353970800000, 33.18],
-            [1354057200000, 33.88],
-            [1354143600000, 34.09],
-            [1354230000000, 34.61],
-            [1354489200000, 34.7],
             [1354575600000, 35.3],
             [1354662000000, 35.4],
             [1354748400000, 35.14],
@@ -447,120 +430,185 @@ export default {
           ],
         },
       ],
-      chartOptions: {
-        chart: {
-          id: "area-datetime",
-          type: "area",
-          height: "100%",
-          zoom: {
-            enabled: false,
-          },
-          toolbar: {
-            show: false,
-          },
-          sparkline: {
-            enabled: true,
-          },
+      series2: [
+        {
+          name: "SLP Treasury",
+          data: [
+            [1327359600000, 30.95],
+            [1327446000000, 31.34],
+            [1327532400000, 31.18],
+            [1327618800000, 31.05],
+            [1327878000000, 31.0],
+            [1327964400000, 30.95],
+            [1328050800000, 31.24],
+            [1328137200000, 31.29],
+            [1328223600000, 31.85],
+            [1328482800000, 31.86],
+            [1328569200000, 32.28],
+            [1328655600000, 32.1],
+            [1328742000000, 32.65],
+            [1328828400000, 32.21],
+            [1329087600000, 32.35],
+            [1329174000000, 32.44],
+            [1329260400000, 32.46],
+            [1329346800000, 32.86],
+            [1329433200000, 32.75],
+            [1329778800000, 32.54],
+            [1329865200000, 32.33],
+            [1329951600000, 32.97],
+            [1330038000000, 33.41],
+            [1330297200000, 33.27],
+            [1330383600000, 33.27],
+            [1330470000000, 32.89],
+            [1330556400000, 33.1],
+            [1330642800000, 33.73],
+            [1330902000000, 33.22],
+            [1330988400000, 31.99],
+            [1331074800000, 32.41],
+            [1331161200000, 33.05],
+            [1331247600000, 33.64],
+            [1331506800000, 33.56],
+            [1331593200000, 34.22],
+            [1331679600000, 33.77],
+            [1331766000000, 34.17],
+            [1331852400000, 33.82],
+            [1332111600000, 34.51],
+            [1332198000000, 33.16],
+            [1332284400000, 33.56],
+            [1332370800000, 33.71],
+            [1332457200000, 33.81],
+            [1332712800000, 34.4],
+            [1332799200000, 34.63],
+            [1336600800000, 31.92],
+            [1337724000000, 32.18],
+            [1337810400000, 31.54],
+            [1337896800000, 31.6],
+            [1338242400000, 32.05],
+            [1338328800000, 31.29],
+            [1338415200000, 31.05],
+            [1338501600000, 29.82],
+            [1338760800000, 30.31],
+            [1338847200000, 30.7],
+            [1338933600000, 31.69],
+            [1339020000000, 31.32],
+            [1342130400000, 30.65],
+            [1342389600000, 30.4],
+            [1342476000000, 30.65],
+            [1352934000000, 32.64],
+            [1353020400000, 32.65],
+            [1353279600000, 32.92],
+            [1353366000000, 32.64],
+            [1353452400000, 32.84],
+            [1353625200000, 33.4],
+            [1353884400000, 33.3],
+            [1353970800000, 33.18],
+            [1354057200000, 33.88],
+            [1354143600000, 34.09],
+            [1354230000000, 34.61],
+            [1354489200000, 34.7],
+            [1354575600000, 35.3],
+            [1354662000000, 35.4],
+            [1354748400000, 35.14],
+            [1354834800000, 35.48],
+            [1355094000000, 35.75],
+            [1355180400000, 35.54],
+            [1355266800000, 35.96],
+          ],
         },
-        stroke: {
-          show: true,
-          curve: "smooth",
-          lineCap: "butt",
-          colors: ["#FFD489"],
-          width: 2,
-          dashArray: 0,
+      ],
+      series3: [
+        {
+          name: "Taked",
+          name2: "Taked",
+          data: [
+            [1327359600000, 30.95],
+            [1327446000000, 31.34],
+            [1327532400000, 31.18],
+            [1327618800000, 31.05],
+            [1327878000000, 31.0],
+            [1327964400000, 30.95],
+            [1328050800000, 31.24],
+            [1328137200000, 31.29],
+            [1328223600000, 31.85],
+            [1328482800000, 31.86],
+            [1328569200000, 32.28],
+            [1328655600000, 32.1],
+            [1328742000000, 32.65],
+            [1328828400000, 32.21],
+            [1329087600000, 32.35],
+            [1329174000000, 32.44],
+            [1329260400000, 32.46],
+            [1329346800000, 32.86],
+            [1329433200000, 32.75],
+            [1329778800000, 32.54],
+            [1329865200000, 32.33],
+            [1329951600000, 32.97],
+            [1330038000000, 33.41],
+            [1330297200000, 33.27],
+            [1330383600000, 33.27],
+            [1330470000000, 32.89],
+            [1330556400000, 33.1],
+            [1330642800000, 33.73],
+            [1330902000000, 33.22],
+            [1330988400000, 31.99],
+            [1331074800000, 32.41],
+            [1331161200000, 33.05],
+            [1331247600000, 33.64],
+            [1331506800000, 33.56],
+            [1331593200000, 34.22],
+            [1331679600000, 33.77],
+            [1331766000000, 34.17],
+            [1331852400000, 33.82],
+            [1332111600000, 34.51],
+            [1332198000000, 33.16],
+            [1332284400000, 33.56],
+            [1332370800000, 33.71],
+            [1332457200000, 33.81],
+            [1332712800000, 34.4],
+            [1332799200000, 34.63],
+            [1336600800000, 31.92],
+            [1337724000000, 32.18],
+            [1337810400000, 31.54],
+            [1337896800000, 31.6],
+            [1338242400000, 32.05],
+            [1338328800000, 31.29],
+            [1338415200000, 31.05],
+            [1338501600000, 29.82],
+            [1338760800000, 30.31],
+            [1338847200000, 30.7],
+            [1338933600000, 31.69],
+            [1339020000000, 31.32],
+            [1342130400000, 30.65],
+            [1342389600000, 30.4],
+            [1342476000000, 30.65],
+            [1352934000000, 32.64],
+            [1353020400000, 32.65],
+            [1353279600000, 32.92],
+            [1353366000000, 32.64],
+            [1353452400000, 32.84],
+            [1353625200000, 33.4],
+            [1353884400000, 33.3],
+            [1353970800000, 33.18],
+            [1354057200000, 33.88],
+            [1354143600000, 34.09],
+            [1354230000000, 34.61],
+            [1354489200000, 34.7],
+            [1354575600000, 35.3],
+            [1354662000000, 35.4],
+            [1354748400000, 35.14],
+            [1354834800000, 35.48],
+            [1355094000000, 35.75],
+            [1355180400000, 35.54],
+            [1355266800000, 35.96],
+          ],
         },
-        grid: {
-          show: false,
-        },
-
-        dataLabels: {
-          enabled: false,
-        },
-        markers: {
-          size: 0,
-          style: "hollow",
-        },
-        xaxis: {
-          type: "datetime",
-          min: new Date("01 Mar 2012").getTime(),
-          // max: new Date().getTime(),
-          tickAmount: 0,
-          labels: {
-            show: false,
-          },
-        },
-
-        tooltip: {
-          enabled: true,
-          fillSeriesColor: false,
-          // theme: "dark",
-          style: {
-            fontSize: "16px",
-            fontFamily: undefined,
-            background: "#000000",
-          },
-          x: {
-            format: "dd MMM yyyy",
-          },
-        },
-        fill: {
-          type: "gradient",
-          colors: ["#FFD489"],
-          gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0,
-            stops: [0, 100],
-          },
-        },
-      },
-      selection: "one_year",
+      ],
     };
-  },
-  methods: {
-    updateData: function (timeline) {
-      this.selection = timeline;
-      switch (timeline) {
-        case "one_month":
-          this.$refs.chart.zoomX(
-            new Date("28 Jan 2013").getTime(),
-            new Date("27 Feb 2013").getTime()
-          );
-          break;
-        case "six_months":
-          this.$refs.chart.zoomX(
-            new Date("27 Sep 2012").getTime(),
-            new Date("27 Feb 2013").getTime()
-          );
-          break;
-        case "one_year":
-          this.$refs.chart.zoomX(
-            new Date("27 Feb 2012").getTime(),
-            new Date("27 Feb 2013").getTime()
-          );
-          break;
-        case "ytd":
-          this.$refs.chart.zoomX(
-            new Date("01 Jan 2013").getTime(),
-            new Date("27 Feb 2013").getTime()
-          );
-          break;
-        case "all":
-          this.$refs.chart.zoomX(
-            new Date("23 Jan 2012").getTime(),
-            new Date("27 Feb 2013").getTime()
-          );
-          break;
-        default:
-      }
-    },
   },
 };
 </script>
 
 <style scoped>
-
 .border-bottom {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   padding-bottom: 5px;
@@ -574,7 +622,7 @@ export default {
 }
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 260px;
+  width: 300px;
   background-color: #313945;
   color: #fff;
   text-align: justify;
