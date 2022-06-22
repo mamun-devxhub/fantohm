@@ -163,7 +163,7 @@
       ></span>
       <span
         aria-hidden="true"
-        class="block absolute h-[2.5px] w-4 mt-[1.4px] bg-primary transform transition duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 left-1/2"
+        class="block absolute h-[2.5px] w-4 mt-[1.6px] bg-primary transform transition duration-500 ease-in-out -translate-x-1/2 -translate-y-1/2 left-1/2"
         :class="{ 'opacity-0': isShown }"
       ></span>
       <span
