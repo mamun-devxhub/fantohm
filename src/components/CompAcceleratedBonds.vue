@@ -69,15 +69,15 @@
           <div>
             <h4 class="text-h4 mb-5">Accelerated Bonds</h4>
           </div>
-          <div class="flex justify-around text-center">
+          <div class="flex justify-between ">
             <div>
-              <p class="text-h4 text-gray">Global Treasury <br /></p>
-              <p class="text-h4 text-gray">Balance <br /></p>
-              <p class="text-h4">$27,997,907 <br /></p>
+              <p class="text-lg sm:text-h4 text-gray">Global Treasury <br /></p>
+              <p class="text-lg sm:text-h4 text-gray">Balance <br /></p>
+              <p class="text-lg sm:text-h4">$27,997,907 <br /></p>
             </div>
             <div>
-              <p class="text-h4 text-gray">FHM Price</p>
-              <p class="text-h4">$NaN</p>
+              <p class="text-lg sm:text-h4 text-gray">FHM Price</p>
+              <p class="text-lg sm:text-h4">$NaN</p>
             </div>
           </div>
         </div>
