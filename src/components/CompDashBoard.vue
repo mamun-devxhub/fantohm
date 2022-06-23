@@ -126,12 +126,12 @@
               >
             </div>
           </div>
-          <button @click="showModal = true" class="">
+          <button @click="showModal2 = true" class="">
             <img src="../assets/icon/dashboard/preview.svg" alt="" />
           </button>
           <ChartModal
-            v-show="showModal"
-            @close-modal="showModal = false"
+            v-show="showModal2"
+            @close-modal="showModal2 = false"
             height="300"
             :series="series2"
             title="Protocol Owned Liquidity, is the amount of LP the treasury owns
@@ -159,12 +159,12 @@
               >
             </div>
           </div>
-          <button @click="showModal = true" class="">
+          <button @click="showModal3 = true" class="">
             <img src="../assets/icon/dashboard/preview.svg" alt="" />
           </button>
           <ChartModal
-            v-show="showModal"
-            @close-modal="showModal = false"
+            v-show="showModal3"
+            @close-modal="showModal3 = false"
             height="300"
             :series="series3"
             title="FHM Staked, is the ratio of sFHM to FHM (staked vs
@@ -192,6 +192,8 @@ export default {
   data() {
     return {
       showModal: false,
+      showModal2: false,
+      showModal3: false,
       series1: [
         {
           name: "Total deposited",
