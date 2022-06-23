@@ -34,7 +34,7 @@
     font-weight: 400;
     line-height: 1.334;
     letter-spacing: 0.4px;
-    padding: 0.2rem 0 1rem;
+    /* padding: 0.2rem 0 1rem; */
     color: #fcfcfc;
   }
   .text-color-secondary {
