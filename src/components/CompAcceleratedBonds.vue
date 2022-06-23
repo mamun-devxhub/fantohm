@@ -6,7 +6,7 @@
         <div></div>
         <div class="col-span-7 xl:col-span-5 main-info lg:ml-7 xl:mx-7">
           <div>
-            <h4 class="text-[18px] sm:text-h5 py-0">Accelerated Bonds</h4>
+            <h4 class="text-[18px] sm:text-h5 mb-3">Accelerated Bonds</h4>
           </div>
 
           <div class="flex flex-col sm:flex-row sm:justify-evenly pb-12">
