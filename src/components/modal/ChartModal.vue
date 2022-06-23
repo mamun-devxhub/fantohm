@@ -19,7 +19,7 @@
         <div class="relative">
           <p>Total Value Deposited</p>
           <p class="text-3xl">
-            <span class="text-white font-bold">$2,271,973</span> Today
+            <span class="text-white font-bold">{{value}}</span> Today
           </p>
           <button @click="$emit('close-modal')" class="absolute top-0 right-0">
             <img
@@ -34,9 +34,7 @@
           <ApexChart :height="height" :series="series" />
         </div>
         <p class="text-white text-base">
-          Total Value Deposited, is the dollar amount of all FHM Staked in the
-          protocol. This metric is often used as growth or health indicator in
-          DeFi projects.
+          {{title}}
         </p>
       </div>
     </div>
