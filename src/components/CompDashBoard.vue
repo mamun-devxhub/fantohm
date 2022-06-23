@@ -26,7 +26,7 @@
         <p class="text-h5">$28,432,324</p>
       </div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
       <div class="main-info">
         <div class="text-h6 flex justify-between items-center">
           <div class="flex items-center">
@@ -57,8 +57,8 @@
         </div>
         <p class="text-h5">$2,378,260</p>
 
-        <div id="chart" class="h-full">
-          <ApexChart height="600" :series="series1" />
+        <div id="chart" class="xl:mt-24" >
+          <ApexChart height="400" :series="series1" />
         </div>
       </div>
       <div class="main-info">
