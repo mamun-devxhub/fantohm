@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard my-3 ">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 main-info mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 main-info mb-8 gap-4">
       <div>
         <p class="text-h6">FHM Price</p>
         <p class="text-h5">$1.07</p>
