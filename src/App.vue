@@ -1,11 +1,14 @@
 <template>
   <div class="flex body-background">
-    <header class="absolute lg:static top-0 w-[19rem]">
-      <the-navigation></the-navigation>
+    <header class="absolute lg:static top-0 w-[19rem] z-[99]">
+      <the-navigation ></the-navigation>
     </header>
+
     <main class="w-full overflow-y-auto">
       <the-header @show-the-modal="showModal = true"></the-header>
-      <TheModal v-show="showModal" @close-modal="showModal = false" />
+      <div class="z-[999]">
+        <TheModal v-show="showModal" @close-modal="showModal = false" />
+      </div>
       <transition name="scale" mode="out-in">
         <router-view @show-the-modal="showModal = true"></router-view>
       </transition>

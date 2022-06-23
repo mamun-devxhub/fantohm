@@ -1,6 +1,6 @@
 <template>
   <section
-    class="grid justify-end sticky z-10 top-0 bg-[#2D3541] pt-3 pb-5 sm:py-5 px-0 sm:px-3"
+    class="grid justify-end sticky z-10 top-0 bg-[#2D3541] pt-3 pb-5 sm:py-5 px-0 "
   >
     <div>
       <ul class="flex">

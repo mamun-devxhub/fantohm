@@ -29,14 +29,14 @@
                   Investment
                 </p>
 
-                <div class="flex  pt-10">
+                <div class="grid grid-cols-2 justify-around pt-10">
                   <img
-                    class="mx-8"
+                    class="justify-self-center col-span-1"
                     :style="{ width: value.width + 'rem' }"
                     :src="value.image"
                     alt=""
                   />
-                  <p>{{ value.investment }}</p>
+                  <p class="col-span-1 justify-self-start">{{ value.investment }}</p>
                 </div>
               </div>
               <div class="text-right">
@@ -91,7 +91,12 @@
         <div v-for="value in marketValues" :key="value.id">
           <div class="main-info lg:ml-7 xl:mx-7 pt-6 pb-10 mb-4">
             <div class="flex items-center ml-5 mb-4">
-              <img class="w-8" :src="value.image" alt="" />
+              <img
+                class="w-8"
+                :style="{ width: value.width + 'rem' }"
+                :src="value.image"
+                alt=""
+              />
               <h4 class="text-md ml-10">{{ value.investment }}</h4>
             </div>
 
@@ -191,6 +196,16 @@ export default {
         },
         {
           id: "8",
+          image: require("../assets/icon/investment/8.svg"),
+          investment: "LQDR-FTM LP",
+          balance: "312124.61",
+          price: "$0.12",
+          value: "$12,069",
+          width: "4.5",
+          display: "none",
+        },
+        {
+          id: "9",
           image: require("../assets/icon/investment/7.svg"),
           investment: "LUNA",
           balance: "9370.48",
