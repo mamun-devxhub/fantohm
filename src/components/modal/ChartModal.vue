@@ -17,7 +17,7 @@
       <div class="w-3/5 bg-modal" @click.stop>
         <!-- Modal body -->
         <div class="relative">
-          <p>Total Value Deposited</p>
+          <p>{{name}}</p>
           <p class="text-3xl">
             <span class="text-white font-bold">{{value}}</span> Today
           </p>
@@ -48,7 +48,7 @@ export default {
   components: {
     ApexChart,
   },
-  props: ["height", "series", "title", "value"],
+  props: ["height", "series","name", "title", "value"],
   emits: ["close-modal"],
   data() {
     return {

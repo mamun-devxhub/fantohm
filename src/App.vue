@@ -36,18 +36,18 @@ export default {
 </script>
 <style>
 .apexcharts-tooltip {
-  background-color: #161d26 !important;
+  background-color: rgba(60, 67, 78, 0.99) !important;
   color: white;
-  border-color: #161d26 !important;
-  width: 240px;
+  border-color: rgba(60, 67, 78, 0.99) !important;
+  width: 300px;
   border-radius: 20px !important;
   padding: 8px 20px;
 }
 
 .apexcharts-tooltip-title {
-  background-color: #161d26 !important;
+  background-color: rgba(60, 67, 78, 0.99) !important;
   color: white;
-  border-color: #161d26 !important;
+  border-color: rgba(60, 67, 78, 0.99) !important;
 }
 .body-background {
   @apply h-full w-full;
