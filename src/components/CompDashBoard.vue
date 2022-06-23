@@ -58,14 +58,14 @@
         <p class="text-h5">$2,378,260</p>
 
         <div id="chart" class="h-full">
-          <ApexChart height="700" :series="series1" />
+          <ApexChart height="600" :series="series1" />
         </div>
       </div>
       <div class="main-info">
         <p class="text-h6">Current network values</p>
-        <p class="text-h5">Fantom network</p>
+        <p class="text-h5 pb-8">Fantom network</p>
 
-        <div class="space-y-3 last-child">
+        <div class="space-y-2 last-child">
           <div class="flex justify-between items-center border-bottom">
             <p class="text-h6">fwsFHM Price</p>
             <p class="text-h5 text-base">$75.43</p>
@@ -613,8 +613,8 @@ export default {
 
 <style scoped>
 .border-bottom {
+  @apply pb-2;
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
-  padding-bottom: 5px;
 }
 .last-child div:last-child {
   border-bottom: 0;
