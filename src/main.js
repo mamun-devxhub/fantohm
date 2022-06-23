@@ -15,10 +15,7 @@ import CompInvestments from './components/CompInvestments.vue';
 import CompUsdbBond from './components/CompUsdbBond.vue';
 import CompAcceleratedBonds from './components/CompAcceleratedBonds.vue';
 import CompBond from './components/CompBond.vue';
-import CompBridge from './components/CompBridge.vue';
-import CompWebsite from './components/CompWebsite.vue';
-import CompGovernance from './components/CompGovernance.vue';
-import CompDocs from './components/CompDocs.vue';
+
 
 
 const router = createRouter({
@@ -35,10 +32,6 @@ const router = createRouter({
     { path: "/usdb-bond", component: CompUsdbBond },
     { path: "/accelerated-bonds", component: CompAcceleratedBonds },
     { path: "/bond", component: CompBond },
-    { path: "/bridge", component: CompBridge },
-    { path: "/website", component: CompWebsite },
-    { path: "/governance", component: CompGovernance },
-    { path: "/docs", component: CompDocs },
   ],
   linkActiveClass: "active",
 });

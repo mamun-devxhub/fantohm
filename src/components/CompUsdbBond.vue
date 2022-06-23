@@ -57,7 +57,7 @@
                 </p>
                 <p class="mt-8"></p>
                 <button
-                  class="px-6 py-1 rounded-md border disabled:text-gray disabled:opacity-80"
+                  class="px-6 py-1 rounded-md border disabled:text-gray disabled:opacity-50"
                   disabled
                   :style="{ marginTop: value.margin }"
                 >
@@ -79,7 +79,7 @@
             <h4 class="text-h4 mb-5">USDB Bond</h4>
             <img class="mb-2" src="../assets/icon/usdb-bond/usdb-banner.png" />
           </div>
-          <div class="flex justify-between ">
+          <div class="flex justify-between">
             <div>
               <p class="text-lg sm:text-h4 text-gray">Global Treasury <br /></p>
               <p class="text-lg sm:text-h4 text-gray">Balance <br /></p>
@@ -101,8 +101,17 @@
             </div>
 
             <div class="flex justify-between">
-              <p>Purchased</p>
-              <p>{{ value.purchased }}</p>
+              <p>Price</p>
+              <p>{{ value.price }}</p>
+            </div>
+            <div>
+              <button
+                class="w-full py-1 rounded-md border disabled:text-gray disabled:opacity-50"
+                disabled
+                :style="{ marginTop: value.margin }"
+              >
+                {{ value.button }}
+              </button>
             </div>
           </div>
         </div>
